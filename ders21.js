@@ -26,31 +26,49 @@ let fuelText = '1-Diesel' + newLine
 
 let fuelType = prompt(fuelText);
 let fuelLiter = Number(prompt('Please enter your fuel liter.'));
-let money = Number(prompt('Enter your cash'));
+let money = Number(prompt("Enter your cash(In Turkish Lira)"));
 
 if (fuelType === '1') {
   //!Diesel
   let amountDiesel = diesel*fuelLiter;
-  if (amountDiesel < cash) {
+  if (amountDiesel < money) {
     //TODO: your amount is enough
-  } else if (amountDiesel > cash) {
-    //TODO: your amount id not enough
+    alert('Your amount is enough you can afford to buy enough diesel.' + 
+    newLine + `The total amount : ${amountDiesel}TL` +
+    newLine + `The available balance : ${money - amountDiesel}`);
+  } else if (amountDiesel >= money) {
+    //TODO: your amount is not enough
+    alert('Your amount is not enough you cant afford to buy enough diesel.' +
+     newLine +`The total amount is : ${amountDiesel}TL`+ 
+     newLine + `The missing amount : ${amountDiesel - money}TL`);
   }
 } else if (fuelType === '2') {
   //!Gasoline
   let amountGasoline = gasoline*fuelLiter;
-  if (amountGasoline < cash) {
+  if (amountGasoline < money) {
     //TODO: your amount is enough
-  } else if (amountGasoline > cash) {
+    alert('Your amount is enough you can afford to buy enough gasoline.' + 
+    newLine + `The total amount : ${amountGasoline}TL`+
+    newLine + `The available balance : ${money - amountGasoline}`);
+  } else if (amountGasoline >= money) {
      //TODO: your amount id not enough
+     alert('Your amount is not enough you cant afford to buy enough gasoline.' +
+      newLine +`The total amount : ${amountGasoline}TL` + 
+      newLine + `The missing amount : ${amountGasoline - money}TL`);
   }
 } else if (fuelType === '3') {
   //!LPG
   let amountLpg = lpg*fuelLiter;
-  if (amountLpg < cash) {
+  if (amountLpg < money) {
     //TODO: your amount is enough
-  } else if (amountLpg > cash) {
+    alert('Your amount is enough you can afford to buy enough diesel.' + 
+    newLine + `The total amount : ${amountLpg}TL`+
+    newLine + `The available balance : ${money - amountLpg}`);
+  } else if (amountLpg >= money) {
      //TODO: your amount id not enough
+     alert('Your amount is not enough you cant affor to buy enought diesel.' + 
+     newLine + `The total amount : ${amountLpg}TL`+ 
+     newLine + `The missing amount : ${amountLpg - money}TL`);
   }
 }else {
   alert('Please select a valid fuel type.');
