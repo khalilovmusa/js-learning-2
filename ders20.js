@@ -4,7 +4,7 @@
 let height = Number(prompt('Please enter your height(in metres) : '));
 let weight = Number(prompt('please enter your current weight : '));
 
-let result = weight / (height * height);
+let result = weight / (height*height);
 
 //TODO: for calculate body mass use kq/m(square) 
 
