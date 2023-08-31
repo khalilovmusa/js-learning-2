@@ -25,8 +25,11 @@ let fuelText = '1-Diesel' + newLine
 + 'Select your fuel type:'
 
 let fuelType = prompt(fuelText);
-let fuelLiter = Number(prompt('Please enter your fuel liter.'));
-let money = Number(prompt("Enter your cash(In Turkish Lira)"));
+if (fuelType =='1' || fuelType=='2' || fuelType=='3') {
+  let fuelLiter = Number(prompt('Please enter your fuel liter.'));
+  let money = Number(prompt("Enter your cash(In Turkish Lira)"));
+}
+
 
 if (fuelType === '1') {
   //!Diesel
