@@ -33,18 +33,22 @@ switch (process) {
       let laterWithdraw = (currentBalance - withdraw);
       alert(`You drawed ${withdraw}TL. Your current balance is : ${laterWithdraw}TL`);
     } else if (withdraw > currentBalance) {
-      alert('Your balance is not capale for this amount money.Try again with the lower amount');
+      alert(`Your balance is not capale for this amount money.Your balance is : ${currentBalance}TL.` + newLine + `Try again with the lower amount`);
     }
     break;
 
   case '3':
     let depositAmount = Number(prompt(`Please enter your deposit amount :`));
-    currentBalance = (currentBalance+depositAmount);
+    currentBalance = (currentBalance + depositAmount);
 
     alert(`You deposited ${depositAmount}TL.` + newLine + `Your current balance is ${currentBalance}TL`);
-  break;
+    break;
 
   case '4':
     alert('You log out sucesfully.');
+    break;
+
+  default:
+    alert('Please enter a valid process number.');
     break;
 }
