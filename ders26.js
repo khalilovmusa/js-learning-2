@@ -1,13 +1,13 @@
-//!-------UNI EXAM POINT CALCULATOR------
+//!------- EXAM POINT CALCULATOR------
 
 
 /*
 
  ?questions
  1-English 40 --each question 4 points
- 2-Math 40
- 3-Social knowledge 20
- 4-religion knowledge
+ 2-Math 40 --each question 5 points
+ 3-Social knowledge 20 --each question 3 points
+ 4-religion knowledge --each question 3 points
 
 
  ---->100 points from OSYM
