@@ -79,7 +79,7 @@ while(true) { //!---->This is an infinity loop we use this loop with breaks.
    console.log(number);
    if(number === 15) {
     break; //TODO------->We must've do this if we don't the loop wl be infinite.
-   }
+   } 
 
    number++;
 
