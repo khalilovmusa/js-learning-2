@@ -10,7 +10,7 @@ alert(`Your letter repeated ${result} times in the text.`);
 function find(letter){
   let totalLetter = 0; //!We must've to create this outside the loop for avoid repeating
   for(let i = 0; i < text.length; i++){
-    if(text.charAt(i).toLowerCase === letter){
+    if(text.charAt(i).toLowerCase() === letter.toLowerCase()){
       totalLetter += 1;
 
     }
