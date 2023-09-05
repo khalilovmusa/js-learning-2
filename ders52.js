@@ -38,3 +38,7 @@ if(processNumbers == 1){
   alert(`You changed your ${[changeIndexNumber]}th index name to ${[changeIndexName]} succesfully`);
 }
 
+let mixedArray = [1,"name",5.6,true,null,undefined];
+console.log(mixedArray);
+
+//!===>we can use different value types for arrays it is only acceptable in js. and we cal call our full array in the console with not giving it any index number.
