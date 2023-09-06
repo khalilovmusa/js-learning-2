@@ -179,12 +179,47 @@ function createRaf(){
   let satir = "";
   for(let i = 0; i < raflar.length; i++){
     for(let j = 0; j < 5; j++){
-      satir+="|" + (raflar[i][j].show ? raflar[i][j].kod : "---") + "|";
+      satir+="|" + (raflar[i][j].show ? raflar[i][j].code : "---") ;
 
     }
     console.log(satir);
+    console.log('--------------------');
     satir="";
   }
 }
 
+ function kodBul(kitapIsmi){
+  let rafKod = null;
+  kitaplar.forEach(function(kitap){
+    if(kitap.isim.toUpperCase().includes(kitapIsmi.toUpperCase(),0)){
+      rafKod = kitap.raf;
+    }
+  });
+  return rafKod;
+
+ }  
+
+function raftaGoster(rafKodu){
+  for(let i = 0; i < raflar.length; i++){
+    for(let j = 0; j < 5; j++){
+      if(raflar[i][j].code==rafKodu){
+        raflar[i][j].show=true;
+        break;
+      }
+    }
+  }
+}
+
+
 createRaf();
+
+let kitapIsmi = prompt("please enter a book name");
+let rafKod = kodBul(kitapIsmi);
+
+
+if(rafKod !=null){
+  raftaGoster(rafKod);
+  createRaf();
+}else{
+  alert("Kitapiniz bizim kutuphanede bulunmamaktatir ");
+}
