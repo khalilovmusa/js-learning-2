@@ -8,9 +8,12 @@ font-family: Arial;
   border-width: 1px;
   border-radius: 10px;
   position: absolute;
-  width: 1100px;
+  width: 1000px;
   left: 7%;
-  
+  height: 480px;
+  padding: 0;
+  margin: 0;
+  margin-top: 15px;
 }
 
 .todo-list-container{
@@ -21,7 +24,8 @@ font-family: Arial;
   border-bottom-color: grey;
   border-bottom-width: 1px;
   border-bottom-style:solid;
-
+  margin-left: -12px;
+  margin-right: -12px;
 }
 
 .todo-list-text{
@@ -64,13 +68,14 @@ font-family: Arial;
 }
 
 .todo-add-button{
-  background-color: rgb(53, 53, 255);
+  background-color: rgb(42, 42, 205);
   border: none;
   border-radius: 5px;
   color: #fff;
   padding-top: 7px;
   padding-bottom: 7px;
-  padding-left: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
   cursor: pointer;
 }
 
@@ -92,4 +97,73 @@ font-family: Arial;
   font-weight: 500;
   font-size: 17px;
 
+}
+
+.todo-search-input{
+
+}
+
+.todo-search-input input{
+  width: 1060px;
+  height: 30px;
+  border-radius: 3px;
+  border-style:solid;
+  border-color: grey;
+  border-width: 1px;
+  padding-left: 10px;
+  margin-bottom: 15px;
+
+}
+
+.todo-list{
+  border-style: solid;
+  border-color: grey;
+  border-width: 1px;
+  border-radius: 7px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 15px;
+  width: 1060px;
+}
+
+.list-element-1,
+.list-element-2,
+.list-element-3{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 7px;
+  padding-right: 5px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: grey;
+  height: 35px;
+  text-align: center;
+}
+
+.list-element-4{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 7px;
+  padding-right: 5px;
+  height: 35px;
+}
+
+.clear-all-todo-container{
+  margin-left: 10px;
+  margin-top: 10px;
+
+}
+
+.clear-all-todo-button{
+  background-color: rgb(42, 42, 205);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 7px;
+  padding-right: 7px;
+  cursor: pointer;
 }
