@@ -1,0 +1,95 @@
+div{
+font-family: Arial;
+}
+
+.container{
+  border-style: solid;
+  border-color: grey;
+  border-width: 1px;
+  border-radius: 10px;
+  position: absolute;
+  width: 1100px;
+  left: 7%;
+  
+}
+
+.todo-list-container{
+  background: rgb(235, 235, 235);
+  height: 70px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-color: grey;
+  border-bottom-width: 1px;
+  border-bottom-style:solid;
+
+}
+
+.todo-list-text{
+  font-size: 20px;
+  margin-top: 50px;
+  margin-left: 20px;
+  position: absolute;
+  top: -10%;
+}
+
+.todo-list-input-container{
+  height: 100px;
+  border-bottom-color: rgb(187, 187, 187);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+
+}
+
+.todo-input{
+  margin-top: 20px;
+  margin-left: 15px;
+
+}
+
+.todo-input input{
+  width: 1060px;
+  height: 26px;
+  border-radius: 3px;
+  border-style:solid;
+  border-color: grey;
+  border-width: 1px;
+  padding-left: 10px;
+}
+
+
+.todo-add-button-container{
+  margin-left: 15px;
+  margin-top: 20px;
+
+}
+
+.todo-add-button{
+  background-color: rgb(53, 53, 255);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 4px;
+  cursor: pointer;
+}
+
+.todo-footer{
+
+}
+
+.todo-list-search{
+  border-bottom-color: grey;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+
+.search-header p {
+  color: black;
+  font-weight: 500;
+  font-size: 17px;
+
+}
