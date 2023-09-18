@@ -7,7 +7,9 @@ const todoList = document.querySelector(".list-group");
 const firstCardBody = document.querySelectorAll(".card-body")[0];
 const secondCardBody = document.querySelectorAll(".card-body")[1];
 const clearButton = document.querySelector("#clearButton");
-// console.log(form);
+
+let todos = [];
+ //console.log(form);
 // console.log(addInput);
 // console.log(secondCardBody);
 // console.log(todoList);
@@ -58,4 +60,18 @@ li.appendChild(a);
 todoList.appendChild(li);
 
 addInput.value = "";
+}
+
+function addTodoToStorage(newTodo){
+  checkTodosFromStorage();
+  todos.push(newTodo);
+  localStorage.setItem("todos" , JSON.stringify(todos));
+}
+
+function checkTodosFromStorage (){
+  if(localStorage.getItem("todos") === null){
+    todos = [];
+  }else{
+    todos = JSON.parse(localStorage.getItem("todos"));
+  }
 }
