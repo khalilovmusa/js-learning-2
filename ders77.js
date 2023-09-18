@@ -1,6 +1,6 @@
 //!==>Todo list project
 
-//TODO==> Atarting with select all the elements
+//TODO==> Starting with select all the elements
 const form = document.querySelectorAll(".card-body")[0].children[0];
 const addInput = document.querySelector("#todoName");
 const todoList = document.querySelector(".list-group");
@@ -25,6 +25,7 @@ function addTodo(e) {
   }else{
     //Adding to webpage
     addTodoToUI(inputText);
+    addTodoToStorage(inputText);
   }
 
   //adding to storage
