@@ -67,9 +67,9 @@ function addTodoToStorage(newTodo){
 }
 
 function checkTodoFromStorage(){
-  if(localStorage.getItem("todoStorage") == null){
+  if(localStorage.getItem("todoStorage") === null){
     todoStorage = [];
   }else{
-    JSON.parse(localStorage.getItem("todoStorage"));
+    todoStorage = JSON.parse(localStorage.getItem("todoStorage"));
   }
 }
