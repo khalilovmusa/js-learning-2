@@ -7,6 +7,8 @@ let firstCardBody = document.querySelectorAll(".card-body")[0];
 let secondCardBody = document.querySelectorAll(".card-body")[1];
 let todoList = document.querySelector(".list-group");
 
+let todoStorage = [];
+
 // console.log(todoList);
 
 //TODO==>We will call the function first for start
@@ -24,6 +26,7 @@ function addTodo(e){
   }else {
     addTodoToUI(inputText);//TODO==>Adding todo to the user interface this code will go to the addTodoToUI(); function
 
+    addTodoToStorage(inputText);//TODO==>Adding our todo element that we created to the local storage with the addTodoStorage(); function
   }
   // console.log("Hello");
   e.preventDefault();
@@ -54,4 +57,20 @@ function addTodoToUI(newTodo){//TODO==>In this function we'll create the html el
   todoList.appendChild(li);//!==>We'll append this child on the list-group item that we selected at the top
 
   addInput.value = "";//!==>We should clear our input right after we added our input to the user interface
+}
+
+
+//==> Now we will add this user interface to the //!==>localStorage
+function addTodoToStorage(newTodo){
+  checkTodoFromStorage();
+  todoStorage.push(newTodo);
+  localStorage.setItem("todoStorage" , JSON.stringify(todoStorage));
+}
+
+function checkTodoFromStorage(){
+  if(localStorage.getItem("todoStorage") === null){
+    todoStorage = [];
+   }else{
+     todoStorage = JSON.parse(localStorage.getItem("todoStorage"))
+   }
 }
