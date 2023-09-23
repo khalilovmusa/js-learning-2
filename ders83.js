@@ -16,12 +16,29 @@ runAllTheEvents();
 
 function runAllTheEvents(){
   form.addEventListener("submit" , addTodo);//!==> If we submit in the form element the page will run addTodo();==>function
+
+  document.addEventListener("DOMContentLoaded" , pageLoaded);
   
-  document.addEventListener("DOMContentLoaded" , pageLoad);
+  secondCardBody.addEventListener("click" , removeTodoFromUI);
 }
 
-function pageLoad(){
-  
+function removeTodoFromUI(e){
+  if(e.target.className === "fa fa-remove"){
+    todoList.removeChild(e.target.parentElement.parentElement);
+    showAlert("danger","Todo removed from the list");
+    // console.log(secondCardBody.children)
+    //  console.log(e.target.parentElement.parentElement);
+    //  console.log(e
+    //   );
+  }
+}
+
+function pageLoaded(){
+  checkTodoFromStorage();
+  todoStorage.forEach(function(todo){
+    // console.log(todo);
+    addTodoToUI(todo);
+  });
 }
 
 function addTodo(e){
