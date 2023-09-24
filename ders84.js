@@ -18,30 +18,19 @@ function runAllTheEvents(){
   form.addEventListener("submit" , addTodo);//!==> If we submit in the form element the page will run addTodo();==>function
 
   document.addEventListener("DOMContentLoaded" , pageLoaded);
-  
+
   secondCardBody.addEventListener("click" , removeTodoFromUI);
+
 }
 
 function removeTodoFromUI(e){
   if(e.target.className === "fa fa-remove"){
     const todo = e.target.parentElement.parentElement;
+    // console.log(todo);
     todoList.removeChild(todo);
-    showAlert("danger","Todo removed from the list");
-    removeTodoFromLocalStorage(todo);
-    // console.log(secondCardBody.children)
-    //  console.log(e.target.parentElement.parentElement);
-    //  console.log(e
-    //   );
+    // console.log("true");
   }
-}
-
-function removeTodoFromLocalStorage(todo){
-
-  // if(todo.textContent.trim() == JSON.stringify(localStorage.getItem(todo.textContent))){
-  //   console.log("yes");
-  // }
-  // JSON.parse(localStorage.getItem(todo.textContent));
-  // console.log(todo.textContent.trim());
+  // console.log(e.target);
 }
 
 function pageLoaded(){
