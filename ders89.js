@@ -7,6 +7,7 @@ let firstCardBody = document.querySelectorAll(".card-body")[0];
 let secondCardBody = document.querySelectorAll(".card-body")[1];
 let todoList = document.querySelector(".list-group");
 let deleteAllTodoButton = document.querySelector("#todoClearButton");
+let filterInput = document.querySelector("#todoSearch");
 
 let todoStorage = [];
 
@@ -23,9 +24,28 @@ function runAllTheEvents(){
   secondCardBody.addEventListener("click" , removeTodoFromUI);
 
   deleteAllTodoButton.addEventListener("click" , deleteAllTodoFromUI);
+
+  filterInput.addEventListener("keyup" , filterAllTodos);
 }
 
-function deleteAllTodoFromUI(e){
+function filterAllTodos(e){
+  const filterValue = e.target.value.toLowerCase().trim();
+  const todoList = document.querySelectorAll(".list-group-item");
+
+  if(todoList.length > 0){
+    todoList.forEach(function(todo){
+      if(todo.textContent.toLowerCase().trim().includes(filterValue)){
+        todo.setAttribute("style" ,"display : block");
+      }else{
+        todo.setAttribute("style" , "display : none !important")
+      }
+    });
+  }else{
+    showAlert("warning" , "You need at least 1 todo on your todo list for searching");
+  }
+}
+
+function deleteAllTodoFromUI(){
   const todos = document.querySelectorAll(".list-group-item");
   if(todos.length > 0){
     todos.forEach(function(todo){
@@ -38,7 +58,7 @@ function deleteAllTodoFromUI(e){
 }
 
 
-function removeTodoFromStorage(todo){
+function removeTodoFromStorage(){
   todoStorage = [];
   localStorage.setItem("todoStorage" , JSON.stringify(todoStorage));
 }
