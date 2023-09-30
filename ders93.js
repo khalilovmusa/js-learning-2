@@ -39,6 +39,10 @@ console.log(a,b,leftNumbers);
 //TODO==> Copying an array
 
 const array1 = ["Musa" , "Mamed" , "Murad" , "Mehman"];
+//The old way
+// array2[0] = array1[0]
+// array2[1] = array1[1]...
 const array2 = [...array1];
+
 
 console.log(array2);
